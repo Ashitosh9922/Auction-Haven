@@ -42,10 +42,9 @@ AuctionHaven is an online auction platform that connects collectors, buyers, and
   - Static files using Django templates
   - Icons and images (via CDN and local assets)
 ## Project Images
-![Screenshot (138)](https://github.com/user-attachments/assets/47c4134a-dbca-4668-b48e-4e5be881eddc)
 ![Screenshot (141)](https://github.com/user-attachments/assets/377eeedb-ab3a-4aa4-88f6-cc857b88d520)
+![Screenshot (138)](https://github.com/user-attachments/assets/47c4134a-dbca-4668-b48e-4e5be881eddc)
 ![Screenshot (140)](https://github.com/user-attachments/assets/132a34df-74b6-48d4-afa4-5378245933ad)
-
 ![Screenshot (124)](https://github.com/user-attachments/assets/70fec760-c3db-40f9-aad3-0a62028ba95e)
 ![Screenshot (125)](https://github.com/user-attachments/assets/85402bd3-c3b2-4a9c-8e69-636e004fb865)
 ![Screenshot (126)](https://github.com/user-attachments/assets/3e988189-fa67-467e-9685-922f12bf56a7)
