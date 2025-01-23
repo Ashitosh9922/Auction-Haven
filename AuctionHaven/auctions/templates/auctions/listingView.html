@@ -1,0 +1,168 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+{% load custom_filters %}
+<!-- component -->
+<section class="min-vh-100 w-100 pb-5 bg-white pt-5 mt-5"> <!-- Added mt-5 here -->
+
+    {% if error_message %}
+    <div
+        id="error-alert"
+        class="alert alert-info d-flex align-items-center mb-4"
+        role="alert"
+    >
+        <svg
+            class="bi bi-info-circle-fill flex-shrink-0 me-3"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7.5 4a.5.5 0 0 1 1 0V7a.5.5 0 0 1-1 0V4zM7.5 9a.5.5 0 0 1 1 0V11a.5.5 0 0 1-1 0V9z"
+            />
+        </svg>
+        <div>
+            <span id="error-message" class="font-weight-bold">{{ error_message }}</span> Bid higher than current price! <span id="countdown">30</span>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Single box with dark border -->
+    <div class="container px-4 py-5 border border-dark rounded bg-dark">
+        <div class="row">
+            <!-- Image Section -->
+            {% if listing.image %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img class="img-fluid rounded shadow-sm" alt="image" src="/media/{{ listing.image }}" />
+            </div>
+            {% endif %}
+
+            <!-- Content Section -->
+            <div class="col-lg-8 col-md-6 ">
+                <div class="card w-100 mb-4">
+                    <div class="card-body">
+                        <!-- Product Titles -->
+                        <h5 class="card-title fs-3">{{ listing.title }}</h5>
+                        <p class="card-text text-muted"><strong>{{ listing.side_product_name }}</strong></p>
+
+                        <!-- Product Description -->
+                        <div class="py-3">
+                            <strong class="h4">Item Description</strong>
+                            <p class="my-1 fs-5">{{ listing.description }}</p>
+                            <p class="text-lg my-1 fs-4"><strong>Owner: </strong>{{ listing.user }}</p>
+                        </div>
+
+                        <!-- Pricing Section -->
+                        <div class="d-flex justify-content-between py-3">
+                            <div class="text-center w-40 p-3">
+                                <p class="fs-4 mb-0">Initial Price</p>
+                                <button class="btn btn-success text-white fs-3">
+                                    <strong>₹{{ listing.starting_value }}</strong>
+                                </button>
+                            </div>
+                            <div class="text-center w-40 p-3">
+                                <p class="fs-4 mb-0">Current Price</p>
+                                <button class="btn btn-danger text-white fs-3">
+                                    <strong>₹{{ current_bid }}</strong>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Current Highest Bidder -->
+                        <div class="my-4 text-center">
+                            <p class="h5">Current Highest Bidder: {% if highest_bidder %} <span>{{ highest_bidder }}</span> {% else %} <span>No one has bid yet!</span> {% endif %}</p>
+                        </div>
+
+                        {% if not user_authenticated %}
+                        <div class="my-4 text-center">
+                            <p class="text-black h5">Please login to place a bid</p>
+                        </div>
+                        {% endif %}
+
+                        {% if owner and listing.auction_active %}
+                        <div class="d-flex justify-content-center mb-4">
+                            <form action="{% url 'close_auction' listing.id %}" method="post">
+                                {% csrf_token %}
+                                <button class="btn btn-danger">Close Auction</button>
+                            </form>
+                        </div>
+                        {% endif %}
+
+                        {% if not owner and user_authenticated %}
+                        {% if active %}
+                        <!-- Bid Form -->
+                        <div class="d-flex flex-column gap-4 my-4 items-center">
+                            <form action="{% url 'bid' listing.id %}" method="post">
+                                {% csrf_token %}
+                                <input class="form-control mb-3" type="number" name="value" placeholder="Place Your Bid" required />
+                                <button class="btn btn-success">Bid</button>
+                            </form>
+
+                            <!-- Watchlist Form -->
+                            {% if user_authenticated %}
+                            <form action="{% url 'watch' listing.id %}" method="post">
+                                {% csrf_token %}
+                                {% if watch %}
+                                <button class="btn btn-danger">Remove from Watchlist</button>
+                                {% else %}
+                                <button class="btn btn-info">Add to Watchlist</button>
+                                {% endif %}
+                            </form>
+                            {% endif %}
+                        </div>
+                        {% else %}
+                        <p class="text-black">Item Expired</p>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if user_authenticated %}
+        <!-- Comment Section -->
+        <div class="mt-4">
+            <h4 class="text-black text-center h5">Comment Section</h4>
+            <div>
+                {% for comment in comments %}
+                <div class="my-3 text-black">
+                    <p><strong>{{ comment.user }}</strong></p>
+                    <div class="rounded border-2 border-primary p-2">{{ comment.comment }}</div>
+                </div>
+                {% endfor %}
+
+                <form action="{% url 'comment' listing.id %}" method="post">
+                    {% csrf_token %}
+                    <label for="comment" class="visually-hidden">Your Comment</label>
+                    <div class="d-flex py-2">
+                        <input id="comment" class="form-control" type="text" name="comment" placeholder="Comment..." required />
+                        <button type="submit" class="btn btn-primary ms-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var remainingTime = 30;
+            var countdownElement = document.getElementById('countdown');
+            var countdownInterval = setInterval(function() {
+                remainingTime--;
+                countdownElement.textContent = remainingTime;
+                if (remainingTime <= 0) {
+                    clearInterval(countdownInterval);
+                    var errorAlert = document.getElementById('error-alert');
+                    if (errorAlert) {
+                        errorAlert.classList.add('d-none');
+                    }
+                }
+            }, 1000);
+        });
+    </script>
+
+</section>
+
+{% endblock %}

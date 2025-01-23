@@ -1,0 +1,39 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<section class="bg-light py-5 min-vh-100">
+    <div class="container text-center mt-5">
+        <h2 class="display-4 mb-4">Your Watch List</h2>
+        <section class="row g-4">
+            {% for listing in listings %}
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- Adjust the image size and use 'contain' to prevent cropping -->
+                    <img src="/media/{{ listing.image }}" class="card-img-top img-fluid bg-dark" alt="{{ listing.title }}" style="height: 250px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ listing.title }}</h5>
+                        <p class="card-text">Category: {{ listing.category }}</p>
+                        <p class="card-text">Current Bid: ₹{{ listing.starting_value }}</p>
+                        <p class="card-text">Status: {% if listing.auction_active %} <span class="text-success">Active</span> {% else %} <span class="text-danger">Expired</span> {% endif %}</p>
+
+                        <!-- Form for 'watch' action -->
+                        <form action="{% url 'watch' listing.id %}" method="post">
+                            {% csrf_token %}
+                            {% if watch %}
+                            <button type="submit" class="btn btn-danger w-75">
+                                Unwatch
+                            </button>
+                            {% else %}
+                            <button type="submit" class="btn btn-primary w-75">
+                                Watch
+                            </button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+</section>
+{% endblock %}

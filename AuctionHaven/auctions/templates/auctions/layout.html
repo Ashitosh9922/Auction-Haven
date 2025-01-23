@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Auction Haven{% endblock %}</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{% static 'auctions/utils.js' %}"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <h5 class="text-center text-dark border p-1 bg-light rounded">
+                        Auction<br> Haven
+                    </h5>
+                </a>                    
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'index' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'categories' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Categories</a>
+                        </li>
+
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'create_listing' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Create Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'your_listings' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Your Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'won_listings' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Won Auctions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'watch_list' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Watch List</a>
+                        </li>
+                        {% endif %}
+
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'view_profile' %}">
+                                <img src="{% static 'auctions/user-edit.svg' %}" alt="user" width="24" height="24">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'logout' %}">
+                                <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
+                                </svg>
+                                Logout
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'register' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-dark" href="{% url 'login' %}" style="transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='black'">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block body %}
+        {% endblock %}
+
+        <footer class="bg-light py-4 mt-5">
+            <div class="container text-center">
+                <a href="{% url 'index' %}">
+                    <h1 class="text-center text-dark">Auction Haven</h1>
+                </a>
+                <h5 class="text-muted mb-3">All Rights Reserved &copy; auctionhaven.com</h5>
+                <nav>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="{% url 'admin_view' %}">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="#">Terms of Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+        // Establish WebSocket connection
+        const auctionSocket = new WebSocket(
+            'ws://' + window.location.host + '/ws/auction/'
+        );
+        
+        // Listen for incoming messages from WebSocket
+        auctionSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+        
+            // Handle new bid
+            if (data.action === "new_bid") {
+                console.log("New Bid:", data.bid);
+                // Example: Update your UI with the new bid
+                const bidContainer = document.getElementById('bid-container');
+                const newBidDiv = document.createElement('div');
+                newBidDiv.classList.add('bid');
+                newBidDiv.innerHTML = `
+                    <p><strong>${data.bid.user}</strong> placed a bid of $${data.bid.value}</p>
+                    <p>Time: ${data.bid.timestamp}</p>
+                `;
+                bidContainer.appendChild(newBidDiv);
+            }
+        
+            // Handle new listing
+            if (data.action === "new_listing") {
+                console.log("New Listing:", data.listing);
+                // Example: Display the new listing on your UI
+                const listingContainer = document.getElementById('listing-container');
+                const newListingDiv = document.createElement('div');
+                newListingDiv.classList.add('listing');
+                newListingDiv.innerHTML = `
+                    <h3>${data.listing.title}</h3>
+                    <p>${data.listing.description}</p>
+                    <p>Posted by: ${data.listing.user}</p>
+                    <p>Created at: ${data.listing.created_at}</p>
+                `;
+                listingContainer.appendChild(newListingDiv);
+            }
+        };
+        
+        // Function to place a bid on a listing
+        function placeBid(listingId, userId, bidValue) {
+            const data = {
+                action: "place_bid",
+                data: {
+                    listing_id: listingId,
+                    user_id: userId,
+                    bid_value: bidValue
+                }
+            };
+            auctionSocket.send(JSON.stringify(data));
+        }
+        
+        // Function to create a new listing
+        function createNewListing(title, description, userId) {
+            const data = {
+                action: "create_listing",
+                data: {
+                    title: title,
+                    description: description,
+                    user_id: userId
+                }
+            };
+            auctionSocket.send(JSON.stringify(data));
+        }
+        </script>
+    </body>
+</html>

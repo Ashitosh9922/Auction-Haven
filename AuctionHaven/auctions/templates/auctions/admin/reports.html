@@ -1,0 +1,237 @@
+{% extends "auctions/admin/admin_layout.html" %}
+{% load static %}
+{% block body %}
+
+<!-- Main Content Area -->
+<div class="container-fluid">
+    <header class="bg-white py-4">
+        <h1 class="text-center h4 font-weight-bold">Auction Haven</h1>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <!-- User-wise Listings Table -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="text-center h5 font-weight-bold mb-4">Users</h2>
+
+                    <div class="card border-dark mb-4">
+                        <h5 class="card-header text-center font-weight-bold">User-wise Listings</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Total Listings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for user in user_wise_listings %}
+                                    <tr>
+                                        <td>{{ user.username }}</td>
+                                        <td>{{ user.total_listings }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- User Registration Reports Table -->
+                    <div class="card border-dark mb-4">
+                        <h5 class="card-header text-center font-weight-bold">User Registration Reports (Last 7 Days)</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Total Registrations</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for data in user_registration_data %}
+                                    <tr>
+                                        <td>{{ data.date_joined__date }}</td>
+                                        <td>{{ data.total_registrations }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- User Registration Reports Chart -->
+                    <div class="my-4">
+                        <h5 class="text-center font-weight-bold mb-2">User Registration Reports Chart (Last 7 Days)</h5>
+                        <canvas id="user-registration-chart" width="400" height="200"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <!-- Listings Section -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="text-center h5 font-weight-bold">Listings</h2>
+
+                    <!-- Day-wise Listings Table -->
+                    <div class="card border-dark mb-4">
+                        <h5 class="card-header text-center font-weight-bold">Day-wise Listings</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Total Listings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for day in day_wise_listings %}
+                                    <tr>
+                                        <td>{{ day.created_at__date|date }}</td>
+                                        <td>{{ day.count }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Day-wise Listings Chart -->
+                    <div class="my-4">
+                        <h5 class="text-center font-weight-bold mb-2">Day-wise Listings Chart</h5>
+                        <canvas id="day-wise-chart" width="400" height="200"></canvas>
+                    </div>
+
+                    <!-- Month-wise Listings Table -->
+                    <div class="card border-dark mb-4">
+                        <h5 class="card-header text-center font-weight-bold">Month-wise Listings</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Total Listings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for i in month_wise_listings %}
+                                    <tr>
+                                        <td>{{ month_names.i }}</td>
+                                        <td>{{ i.count }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Month-wise Listings Chart -->
+                    <div class="my-4">
+                        <h5 class="text-center font-weight-bold mb-2">Month-wise Listings Chart</h5>
+                        <canvas id="month-wise-chart" width="400" height="200"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // User Registration Reports Chart
+        var userRegistrationCanvas = document.getElementById('user-registration-chart').getContext('2d');
+        var userRegistrationChart = new Chart(userRegistrationCanvas, {
+            type: 'bar',
+            data: {
+                labels: [
+                    {% for data in user_registration_data %}
+                    "{{ data.date_joined__date }}",
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Total Registrations',
+                    data: [
+                        {% for data in user_registration_data %}
+                        {{ data.total_registrations }},
+                        {% endfor %}
+                    ],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Day-wise Listings Chart
+        var dayWiseCanvas = document.getElementById('day-wise-chart').getContext('2d');
+        var dayWiseChart = new Chart(dayWiseCanvas, {
+            type: 'bar',
+            data: {
+                labels: [
+                    {% for day in day_wise_listings %}
+                    "{{ day.created_at__date|date }}",
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Total Listings',
+                    data: [
+                        {% for day in day_wise_listings %}
+                        {{ day.count }},
+                        {% endfor %}
+                    ],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Month-wise Listings Chart
+        var monthWiseCanvas = document.getElementById('month-wise-chart').getContext('2d');
+        var monthWiseChart = new Chart(monthWiseCanvas, {
+            type: 'bar',
+            data: {
+                labels: [
+                    {% for i in month_wise_listings %}
+                    "{{ month_names.i }}",
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Total Listings',
+                    data: [
+                        {% for i in month_wise_listings %}
+                        {{ i.count }},
+                        {% endfor %}
+                    ],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+{% endblock %}

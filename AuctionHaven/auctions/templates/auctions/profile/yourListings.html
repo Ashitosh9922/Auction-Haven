@@ -1,0 +1,37 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<section class="bg-light py-5 min-vh-100">
+    <h2 class="text-dark display-5 fw-bold text-center mb-4">Your Listings</h2> <!-- Title centered horizontally -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            {% for listing in listings %}
+                <div class="col">
+                    <div class="card">
+                        <!-- Adjust the image size and use 'contain' to prevent cropping -->
+                        <img src="/media/{{ listing.image }}" class="card-img-top img-fluid bg-dark" alt="product_img" style="height: 250px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ listing.title }}</h5>
+                            <p class="card-text">Category: {{ listing.category }}</p>
+                            <p class="card-text">Current Bid: ₹{{ listing.starting_value }}</p>
+                            
+                            <!-- Display auction status -->
+                            {% if listing.auction_active %}
+                                <p class="text-success fw-bold">Active</p>
+                                <a href="{% url 'listing' listing.id %}" class="btn btn-success">Bid Now</a>
+                            {% else %}
+                                <p class="text-danger fw-bold">Expired</p>
+                                {% if listing.winner %}
+                                    <p class="fw-bold">Winner: {{ listing.winner.username }}</p>
+                                {% else %}
+                                    <p class="fw-bold">No winner yet.</p>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

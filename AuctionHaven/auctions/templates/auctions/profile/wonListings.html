@@ -1,0 +1,36 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="bg-light min-vh-100 d-flex flex-column align-items-center pt-5 mt-5">
+
+    <h1 class="display-4 fw-bold">Won Auctions</h1>
+
+    {% if listings %}
+    <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    
+        {% for listing in listings %}
+        <div class="col">
+            <div class="card bg-light text-dark rounded-lg shadow-sm">
+                <a href="{% url 'listing' listing.id %}" class="text-decoration-none">
+                    <div class="card-img-top overflow-hidden">
+                        <img src="/media/{{ listing.image }}" alt="{{ listing.title }}" class="card-img-top object-cover" style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ listing.title }}</h3>
+                        <p class="card-text">Category: {{ listing.category }}</p>
+                        <p class="card-text">Final Bid: ₹ {{ listing.starting_value }}</p>
+                        <p class="card-text text-success">Congratulations You Won!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    
+    </section>
+    {% else %}
+    <div class="text-center">
+        <h1 class="text-dark display-5">You have not won any auctions yet!</h1>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
