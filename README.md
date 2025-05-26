@@ -33,8 +33,6 @@ AuctionHaven is an online auction platform that connects collectors, buyers, and
 
 - **Backend**:
   - Django (Python)
-  - Django Channels
-  - WebSocket
   - SQLite
 
 - **Tools & Libraries**:
