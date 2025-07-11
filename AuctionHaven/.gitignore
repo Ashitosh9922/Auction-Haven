@@ -1,0 +1,7 @@
+echo "*.pyc" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "db.sqlite3" >> .gitignore
+git rm --cached -r auctions/__pycache__/
+git rm --cached -r auctions/migrations/__pycache__/
+git rm --cached -r commerce/__pycache__/
+git rm --cached db.sqlite3

@@ -1,4 +1,8 @@
 asgiref==3.8.1
+<<<<<<< HEAD
+=======
+daphne==4.0.0 
+>>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5
 Django==5.0.6
 pillow==10.3.0
 sqlparse==0.5.0
