@@ -1,0 +1,54 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg
+*.egg-info/
+
+# SQLite database
+db.sqlite3
+
+# Django migrations (ignore all except __init__.py)
+**/migrations/
+!**/migrations/__init__.py
+
+# Static and media files
+/static/
+media/
+
+# Logs
+*.log
+debug.log
+
+# IDE settings
+.vscode/
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Environment files
+.env
+.env.*
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Compiled JS or frontend tools
+*.bundle.js
+*.min.js
+*.map
+node_modules/
+
+# Channels/WebSockets (if removed from your project)
+**/routing.py
+**/consumers.py
+**/asgi.py
