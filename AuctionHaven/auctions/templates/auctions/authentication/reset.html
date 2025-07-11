@@ -1,0 +1,32 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+
+    {% if message %}
+    <div class="alert alert-info d-flex justify-content-between align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+            <use xlink:href="#info-circle-fill"></use>
+        </svg>
+        <div>
+            <span class="font-weight-bold">{{ message }}</span>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg-light">
+        <div class="row w-100 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12 p-5 bg-white rounded shadow-lg">
+                <h2 class="text-4xl font-weight-bold mb-4 text-center text-primary">Password Reset</h2>
+
+                <p class="text-dark mb-4">Your password has been successfully reset.</p>
+                <p class="text-dark mb-4">An email with your new password has been sent to your registered email address. Please check your inbox.</p>
+                <p class="text-dark mb-4">You can now <a href="{% url 'login' %}" class="text-primary">log in</a> using your new password.</p>
+
+                <div class="text-center mt-4">
+                    <a href="{% url 'login' %}" class="btn btn-primary px-4 py-2">Log In Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

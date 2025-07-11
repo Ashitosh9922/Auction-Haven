@@ -1,0 +1,61 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="bg-light dark:bg-dark min-vh-100 pt-5">
+        <div class="container">
+            <h2 class="text-3xl font-semibold mb-4 text-cyan-500">
+                <a class="text-decoration-none hover-underline" href="{% url 'categories' %}">Category</a>  {{ category }}
+            </h2>
+
+            <h4 class="text-xl font-semibold mb-2 text-white">Active Listings</h4>
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                {% for listing in active_listings %}
+                    <div class="col">
+                        <div class="card bg-light dark:bg-dark-800 shadow-sm rounded-lg">
+                            <a class="text-decoration-none" href="{% url 'listing' listing.id %}">
+                                <img src="/media/{{ listing.image }}" alt="{{ listing.title }}" class="card-img-top object-contain" style="height: 200px;">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark dark:text-light">{{ listing.title }}</h5>
+                                    <p class="card-text text-muted">Category: {{ listing.category }}</p>
+                                    <p class="card-text text-muted">Current Bid: ₹{{ listing.starting_value }}</p>
+                                    <p class="card-text">
+                                        Status: {% if listing.auction_active %}
+                                            <span class="badge bg-success">Active</span>
+                                        {% else %}
+                                            <span class="badge bg-danger">Expired</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+
+            <h4 class="text-xl font-semibold my-4 text-danger">Inactive Listings</h4>
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                {% for listing in inactive_listings %}
+                    <div class="col">
+                        <div class="card bg-light dark:bg-dark-800 shadow-sm rounded-lg">
+                            <a class="text-decoration-none" href="{% url 'listing' listing.id %}">
+                                <img src="/media/{{ listing.image }}" alt="{{ listing.title }}" class="card-img-top object-contain" style="height: 200px;">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark dark:text-light">{{ listing.title }}</h5>
+                                    <p class="card-text text-muted">Category: {{ listing.category }}</p>
+                                    <p class="card-text text-muted">Current Bid: ₹{{ listing.starting_value }}</p>
+                                    <p class="card-text">
+                                        Status: {% if listing.auction_active %}
+                                            <span class="badge bg-success">Active</span>
+                                        {% else %}
+                                            <span class="badge bg-danger">Expired</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+{% endblock %}

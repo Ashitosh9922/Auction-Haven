@@ -1,0 +1,685 @@
+Using selector: SelectSelector
+Using selector: SelectSelector
+Watching for file changes with StatReloader
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=127.0.0.1
+Listening on TCP address 127.0.0.1:8000
+HTTP b'GET' request for ['127.0.0.1', 56692]
+HTTP 200 response started for ['127.0.0.1', 56692]
+HTTP close for ['127.0.0.1', 56692]
+HTTP response complete for ['127.0.0.1', 56692]
+[mHTTP GET / 200 [0.09, 127.0.0.1:56692][0m
+HTTP b'GET' request for ['127.0.0.1', 56692]
+HTTP b'GET' request for ['127.0.0.1', 56694]
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56692]
+HTTP response chunk for ['127.0.0.1', 56692]
+HTTP close for ['127.0.0.1', 56692]
+HTTP response complete for ['127.0.0.1', 56692]
+[mHTTP GET /static/auctions/utils.js 200 [0.14, 127.0.0.1:56692][0m
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/Spider_man_Comic.jpg 200 [0.14, 127.0.0.1:56696][0m
+HTTP 200 response started for ['127.0.0.1', 56694]
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP close for ['127.0.0.1', 56694]
+HTTP response complete for ['127.0.0.1', 56694]
+[mHTTP GET /media/images/A14wLNkt2iL.jpg 200 [0.17, 127.0.0.1:56694][0m
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/Gojo_Figurine_fQlbzia.webp 200 [0.02, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56694]
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP close for ['127.0.0.1', 56694]
+HTTP response complete for ['127.0.0.1', 56694]
+[mHTTP GET /media/images/super_mario.jpg 200 [0.02, 127.0.0.1:56694][0m
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/libertyCoin.jpg 200 [0.02, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/Stan-Lee-Super-Heroes-Framed-scaled.jpg 200 [0.02, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/18batman-comic-jumbo.webp 200 [0.02, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/_117877125_mediaitem117877124.jpg.webp 200 [0.01, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/X-Men-Sentinel.jpg 200 [0.01, 127.0.0.1:56696][0m
+HTTP b'GET' request for ['127.0.0.1', 56696]
+HTTP b'GET' request for ['127.0.0.1', 56694]
+HTTP 200 response started for ['127.0.0.1', 56696]
+HTTP response chunk for ['127.0.0.1', 56696]
+HTTP close for ['127.0.0.1', 56696]
+HTTP response complete for ['127.0.0.1', 56696]
+[mHTTP GET /media/images/deadpool_signed_stan_lee.jpg 200 [0.01, 127.0.0.1:56696][0m
+HTTP 200 response started for ['127.0.0.1', 56694]
+HTTP response chunk for ['127.0.0.1', 56694]
+HTTP close for ['127.0.0.1', 56694]
+HTTP response complete for ['127.0.0.1', 56694]
+[mHTTP GET /media/images/download_7_Y4OMPOB.jpeg 200 [0.02, 127.0.0.1:56694][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:56708]
+Upgraded connection ['127.0.0.1', 56708] to WebSocket
+HTTP b'GET' request for ['127.0.0.1', 56694]
+Not Found: /favicon.ico
+HTTP 404 response started for ['127.0.0.1', 56694]
+HTTP close for ['127.0.0.1', 56694]
+HTTP response complete for ['127.0.0.1', 56694]
+[33mHTTP GET /favicon.ico 404 [0.01, 127.0.0.1:56694][0m
+WebSocket ['127.0.0.1', 56708] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:56708]
+WebSocket ['127.0.0.1', 56708] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58184]
+Bids for listing 6: <QuerySet []>
+No bids found for listing 6
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /listing/6/ 200 [0.02, 127.0.0.1:58184][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58188]
+Upgraded connection ['127.0.0.1', 58188] to WebSocket
+WebSocket closed for ['127.0.0.1', 56708]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:56708]
+WebSocket ['127.0.0.1', 58188] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58188]
+WebSocket ['127.0.0.1', 58188] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:58184][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58379]
+Upgraded connection ['127.0.0.1', 58379] to WebSocket
+WebSocket ['127.0.0.1', 58379] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58379]
+WebSocket ['127.0.0.1', 58379] accepted by application
+WebSocket closed for ['127.0.0.1', 58188]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58188]
+HTTP b'POST' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP POST /login/ 200 [1.05, 127.0.0.1:58184][0m
+WebSocket closed for ['127.0.0.1', 58379]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58379]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58490]
+Upgraded connection ['127.0.0.1', 58490] to WebSocket
+WebSocket ['127.0.0.1', 58490] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58490]
+WebSocket ['127.0.0.1', 58490] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:58184][0m
+WebSocket closed for ['127.0.0.1', 58490]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58490]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58520]
+Upgraded connection ['127.0.0.1', 58520] to WebSocket
+WebSocket ['127.0.0.1', 58520] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58520]
+WebSocket ['127.0.0.1', 58520] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /register/ 200 [0.01, 127.0.0.1:58184][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58534]
+Upgraded connection ['127.0.0.1', 58534] to WebSocket
+WebSocket closed for ['127.0.0.1', 58520]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58520]
+WebSocket ['127.0.0.1', 58534] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58534]
+WebSocket ['127.0.0.1', 58534] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET / 200 [0.06, 127.0.0.1:58184][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58570]
+Upgraded connection ['127.0.0.1', 58570] to WebSocket
+WebSocket ['127.0.0.1', 58570] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58570]
+WebSocket ['127.0.0.1', 58570] accepted by application
+WebSocket closed for ['127.0.0.1', 58534]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58534]
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /category/ 200 [0.01, 127.0.0.1:58184][0m
+HTTP b'GET' request for ['127.0.0.1', 58184]
+HTTP b'GET' request for ['127.0.0.1', 58187]
+HTTP b'GET' request for ['127.0.0.1', 58637]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58638]
+Upgraded connection ['127.0.0.1', 58638] to WebSocket
+WebSocket closed for ['127.0.0.1', 58570]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58570]
+HTTP 200 response started for ['127.0.0.1', 58184]
+HTTP response chunk for ['127.0.0.1', 58184]
+HTTP close for ['127.0.0.1', 58184]
+HTTP response complete for ['127.0.0.1', 58184]
+[mHTTP GET /static/auctions/coins.svg 200 [0.02, 127.0.0.1:58184][0m
+HTTP 200 response started for ['127.0.0.1', 58187]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP response chunk for ['127.0.0.1', 58187]
+HTTP close for ['127.0.0.1', 58187]
+HTTP response complete for ['127.0.0.1', 58187]
+[mHTTP GET /static/auctions/figurine.svg 200 [0.02, 127.0.0.1:58187][0m
+HTTP response chunk for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /static/auctions/other_icon.svg 200 [0.02, 127.0.0.1:58637][0m
+WebSocket ['127.0.0.1', 58638] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58638]
+WebSocket ['127.0.0.1', 58638] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /category/ 200 [0.01, 127.0.0.1:58637][0m
+WebSocket closed for ['127.0.0.1', 58638]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58638]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58810]
+Upgraded connection ['127.0.0.1', 58810] to WebSocket
+WebSocket ['127.0.0.1', 58810] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58810]
+WebSocket ['127.0.0.1', 58810] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /register/ 200 [0.01, 127.0.0.1:58637][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58826]
+Upgraded connection ['127.0.0.1', 58826] to WebSocket
+WebSocket ['127.0.0.1', 58826] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58826]
+WebSocket ['127.0.0.1', 58826] accepted by application
+WebSocket closed for ['127.0.0.1', 58810]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58810]
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:58637][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:58886]
+Upgraded connection ['127.0.0.1', 58886] to WebSocket
+WebSocket ['127.0.0.1', 58886] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:58886]
+WebSocket ['127.0.0.1', 58886] accepted by application
+WebSocket closed for ['127.0.0.1', 58826]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58826]
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET / 200 [0.02, 127.0.0.1:58637][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59062]
+Upgraded connection ['127.0.0.1', 59062] to WebSocket
+WebSocket ['127.0.0.1', 59062] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59062]
+WebSocket ['127.0.0.1', 59062] accepted by application
+WebSocket closed for ['127.0.0.1', 58886]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:58886]
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET / 200 [0.03, 127.0.0.1:58637][0m
+WebSocket closed for ['127.0.0.1', 59062]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59062]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59744]
+Upgraded connection ['127.0.0.1', 59744] to WebSocket
+WebSocket ['127.0.0.1', 59744] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59744]
+WebSocket ['127.0.0.1', 59744] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /category/ 200 [0.01, 127.0.0.1:58637][0m
+WebSocket closed for ['127.0.0.1', 59744]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59744]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59757]
+Upgraded connection ['127.0.0.1', 59757] to WebSocket
+WebSocket ['127.0.0.1', 59757] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59757]
+WebSocket ['127.0.0.1', 59757] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 58637]
+HTTP 200 response started for ['127.0.0.1', 58637]
+HTTP close for ['127.0.0.1', 58637]
+HTTP response complete for ['127.0.0.1', 58637]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:58637][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59795]
+Upgraded connection ['127.0.0.1', 59795] to WebSocket
+WebSocket ['127.0.0.1', 59795] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59795]
+WebSocket ['127.0.0.1', 59795] accepted by application
+WebSocket closed for ['127.0.0.1', 59757]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59757]
+Using selector: SelectSelector
+Using selector: SelectSelector
+Watching for file changes with StatReloader
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=127.0.0.1
+Listening on TCP address 127.0.0.1:8000
+HTTP b'GET' request for ['127.0.0.1', 51277]
+HTTP 200 response started for ['127.0.0.1', 51277]
+HTTP close for ['127.0.0.1', 51277]
+HTTP response complete for ['127.0.0.1', 51277]
+[mHTTP GET / 200 [0.11, 127.0.0.1:51277][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:51282]
+Upgraded connection ['127.0.0.1', 51282] to WebSocket
+WebSocket ['127.0.0.1', 51282] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:51282]
+WebSocket ['127.0.0.1', 51282] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 51277]
+HTTP 200 response started for ['127.0.0.1', 51277]
+HTTP close for ['127.0.0.1', 51277]
+HTTP response complete for ['127.0.0.1', 51277]
+[mHTTP GET /api/listings/ 200 [0.07, 127.0.0.1:51277][0m
+HTTP b'GET' request for ['127.0.0.1', 51277]
+HTTP b'GET' request for ['127.0.0.1', 51278]
+HTTP b'GET' request for ['127.0.0.1', 51521]
+HTTP b'GET' request for ['127.0.0.1', 51520]
+HTTP b'GET' request for ['127.0.0.1', 51522]
+HTTP b'GET' request for ['127.0.0.1', 51523]
+WebSocket closed for ['127.0.0.1', 51282]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:51282]
+HTTP 200 response started for ['127.0.0.1', 51278]
+HTTP response chunk for ['127.0.0.1', 51278]
+HTTP close for ['127.0.0.1', 51278]
+HTTP response complete for ['127.0.0.1', 51278]
+[mHTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.17, 127.0.0.1:51278][0m
+HTTP b'GET' request for ['127.0.0.1', 51278]
+HTTP 200 response started for ['127.0.0.1', 51277]
+HTTP response chunk for ['127.0.0.1', 51277]
+HTTP response chunk for ['127.0.0.1', 51277]
+HTTP close for ['127.0.0.1', 51277]
+HTTP response complete for ['127.0.0.1', 51277]
+[mHTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.18, 127.0.0.1:51277][0m
+HTTP 200 response started for ['127.0.0.1', 51278]
+HTTP b'GET' request for ['127.0.0.1', 51277]
+HTTP response chunk for ['127.0.0.1', 51278]
+HTTP close for ['127.0.0.1', 51278]
+HTTP response complete for ['127.0.0.1', 51278]
+[mHTTP GET /static/rest_framework/js/csrf.js 200 [0.01, 127.0.0.1:51278][0m
+HTTP 200 response started for ['127.0.0.1', 51520]
+HTTP 200 response started for ['127.0.0.1', 51523]
+HTTP 200 response started for ['127.0.0.1', 51522]
+HTTP 200 response started for ['127.0.0.1', 51521]
+HTTP response chunk for ['127.0.0.1', 51520]
+HTTP close for ['127.0.0.1', 51520]
+HTTP response complete for ['127.0.0.1', 51520]
+[mHTTP GET /static/rest_framework/css/prettify.css 200 [0.18, 127.0.0.1:51520][0m
+HTTP b'GET' request for ['127.0.0.1', 51278]
+HTTP response chunk for ['127.0.0.1', 51523]
+HTTP close for ['127.0.0.1', 51523]
+HTTP response complete for ['127.0.0.1', 51523]
+[mHTTP GET /static/rest_framework/js/ajax-form.js 200 [0.18, 127.0.0.1:51523][0m
+HTTP response chunk for ['127.0.0.1', 51521]
+HTTP close for ['127.0.0.1', 51521]
+HTTP response complete for ['127.0.0.1', 51521]
+[mHTTP GET /static/rest_framework/css/default.css 200 [0.19, 127.0.0.1:51521][0m
+HTTP response chunk for ['127.0.0.1', 51522]
+HTTP response chunk for ['127.0.0.1', 51522]
+HTTP close for ['127.0.0.1', 51522]
+HTTP response complete for ['127.0.0.1', 51522]
+[mHTTP GET /static/rest_framework/js/jquery-3.7.1.min.js 200 [0.19, 127.0.0.1:51522][0m
+HTTP b'GET' request for ['127.0.0.1', 51520]
+HTTP 200 response started for ['127.0.0.1', 51277]
+HTTP b'GET' request for ['127.0.0.1', 51523]
+HTTP response chunk for ['127.0.0.1', 51277]
+HTTP close for ['127.0.0.1', 51277]
+HTTP response complete for ['127.0.0.1', 51277]
+[mHTTP GET /static/rest_framework/js/bootstrap.min.js 200 [0.02, 127.0.0.1:51277][0m
+HTTP 200 response started for ['127.0.0.1', 51278]
+HTTP b'GET' request for ['127.0.0.1', 51522]
+HTTP response chunk for ['127.0.0.1', 51278]
+HTTP close for ['127.0.0.1', 51278]
+HTTP response complete for ['127.0.0.1', 51278]
+[mHTTP GET /static/rest_framework/js/prettify-min.js 200 [0.02, 127.0.0.1:51278][0m
+HTTP 200 response started for ['127.0.0.1', 51520]
+HTTP 200 response started for ['127.0.0.1', 51523]
+HTTP response chunk for ['127.0.0.1', 51520]
+HTTP close for ['127.0.0.1', 51520]
+HTTP response complete for ['127.0.0.1', 51520]
+[mHTTP GET /static/rest_framework/js/default.js 200 [0.02, 127.0.0.1:51520][0m
+HTTP response chunk for ['127.0.0.1', 51523]
+HTTP close for ['127.0.0.1', 51523]
+HTTP response complete for ['127.0.0.1', 51523]
+[mHTTP GET /static/rest_framework/js/load-ajax-form.js 200 [0.02, 127.0.0.1:51523][0m
+HTTP 200 response started for ['127.0.0.1', 51522]
+HTTP response chunk for ['127.0.0.1', 51522]
+HTTP close for ['127.0.0.1', 51522]
+HTTP response complete for ['127.0.0.1', 51522]
+[mHTTP GET /static/rest_framework/img/grid.png 200 [0.01, 127.0.0.1:51522][0m
+HTTP b'GET' request for ['127.0.0.1', 54608]
+HTTP 200 response started for ['127.0.0.1', 54608]
+HTTP close for ['127.0.0.1', 54608]
+HTTP response complete for ['127.0.0.1', 54608]
+[mHTTP GET /api/listings/ 200 [0.03, 127.0.0.1:54608][0m
+HTTP b'GET' request for ['127.0.0.1', 54608]
+HTTP 200 response started for ['127.0.0.1', 54608]
+HTTP close for ['127.0.0.1', 54608]
+HTTP response complete for ['127.0.0.1', 54608]
+[mHTTP GET /api/listings/ 200 [0.04, 127.0.0.1:54608][0m
+HTTP b'GET' request for ['127.0.0.1', 54608]
+HTTP 200 response started for ['127.0.0.1', 54608]
+HTTP close for ['127.0.0.1', 54608]
+HTTP response complete for ['127.0.0.1', 54608]
+[mHTTP GET /api/listings/1/ 200 [0.02, 127.0.0.1:54608][0m
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /api/listings/1/ 200 [0.03, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59635]
+Upgraded connection ['127.0.0.1', 59635] to WebSocket
+WebSocket ['127.0.0.1', 59635] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59635]
+WebSocket ['127.0.0.1', 59635] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /category/ 200 [0.02, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59663]
+Upgraded connection ['127.0.0.1', 59663] to WebSocket
+WebSocket ['127.0.0.1', 59663] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59663]
+WebSocket ['127.0.0.1', 59663] accepted by application
+WebSocket closed for ['127.0.0.1', 59635]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59635]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /register/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59680]
+Upgraded connection ['127.0.0.1', 59680] to WebSocket
+WebSocket ['127.0.0.1', 59680] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59680]
+WebSocket ['127.0.0.1', 59680] accepted by application
+WebSocket closed for ['127.0.0.1', 59663]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59663]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59699]
+Upgraded connection ['127.0.0.1', 59699] to WebSocket
+WebSocket ['127.0.0.1', 59699] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59699]
+WebSocket ['127.0.0.1', 59699] accepted by application
+WebSocket closed for ['127.0.0.1', 59680]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59680]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /register/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59711]
+Upgraded connection ['127.0.0.1', 59711] to WebSocket
+WebSocket ['127.0.0.1', 59711] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59711]
+WebSocket ['127.0.0.1', 59711] accepted by application
+WebSocket closed for ['127.0.0.1', 59699]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59699]
+HTTP b'POST' request for ['127.0.0.1', 59606]
+HTTP 302 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[32mHTTP POST /register/ 302 [1.11, 127.0.0.1:59606][0m
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /login/ 200 [0.00, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59871]
+Upgraded connection ['127.0.0.1', 59871] to WebSocket
+WebSocket ['127.0.0.1', 59871] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59871]
+WebSocket ['127.0.0.1', 59871] accepted by application
+WebSocket closed for ['127.0.0.1', 59711]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59711]
+HTTP b'POST' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP POST /login/ 200 [0.98, 127.0.0.1:59606][0m
+WebSocket closed for ['127.0.0.1', 59871]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59871]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:59978]
+Upgraded connection ['127.0.0.1', 59978] to WebSocket
+WebSocket ['127.0.0.1', 59978] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:59978]
+WebSocket ['127.0.0.1', 59978] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket closed for ['127.0.0.1', 59978]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:59978]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60030]
+Upgraded connection ['127.0.0.1', 60030] to WebSocket
+WebSocket ['127.0.0.1', 60030] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60030]
+WebSocket ['127.0.0.1', 60030] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /register/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60045]
+Upgraded connection ['127.0.0.1', 60045] to WebSocket
+WebSocket ['127.0.0.1', 60045] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60045]
+WebSocket ['127.0.0.1', 60045] accepted by application
+WebSocket closed for ['127.0.0.1', 60030]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60030]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /login/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60088]
+Upgraded connection ['127.0.0.1', 60088] to WebSocket
+WebSocket ['127.0.0.1', 60088] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60088]
+WebSocket ['127.0.0.1', 60088] accepted by application
+WebSocket closed for ['127.0.0.1', 60045]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60045]
+HTTP b'POST' request for ['127.0.0.1', 59606]
+HTTP 302 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[32mHTTP POST /login/ 302 [1.15, 127.0.0.1:59606][0m
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET / 200 [0.05, 127.0.0.1:59606][0m
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP response chunk for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /static/auctions/user-edit.svg 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60230]
+Upgraded connection ['127.0.0.1', 60230] to WebSocket
+WebSocket closed for ['127.0.0.1', 60088]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60088]
+WebSocket ['127.0.0.1', 60230] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60230]
+WebSocket ['127.0.0.1', 60230] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET / 200 [0.03, 127.0.0.1:59606][0m
+WebSocket closed for ['127.0.0.1', 60230]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60230]
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60259]
+Upgraded connection ['127.0.0.1', 60259] to WebSocket
+WebSocket ['127.0.0.1', 60259] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60259]
+WebSocket ['127.0.0.1', 60259] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /category/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60281]
+Upgraded connection ['127.0.0.1', 60281] to WebSocket
+WebSocket ['127.0.0.1', 60281] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60281]
+WebSocket ['127.0.0.1', 60281] accepted by application
+WebSocket closed for ['127.0.0.1', 60259]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60259]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /create_listing/ 200 [0.03, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60296]
+Upgraded connection ['127.0.0.1', 60296] to WebSocket
+WebSocket ['127.0.0.1', 60296] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60296]
+WebSocket ['127.0.0.1', 60296] accepted by application
+WebSocket closed for ['127.0.0.1', 60281]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60281]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /your_listings/ 200 [0.02, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60315]
+Upgraded connection ['127.0.0.1', 60315] to WebSocket
+WebSocket closed for ['127.0.0.1', 60296]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60296]
+WebSocket ['127.0.0.1', 60315] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60315]
+WebSocket ['127.0.0.1', 60315] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /won_listings/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60376]
+Upgraded connection ['127.0.0.1', 60376] to WebSocket
+WebSocket ['127.0.0.1', 60376] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60376]
+WebSocket ['127.0.0.1', 60376] accepted by application
+WebSocket closed for ['127.0.0.1', 60315]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60315]
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /watch_list/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60393]
+Upgraded connection ['127.0.0.1', 60393] to WebSocket
+WebSocket closed for ['127.0.0.1', 60376]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60376]
+WebSocket ['127.0.0.1', 60393] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60393]
+WebSocket ['127.0.0.1', 60393] accepted by application
+HTTP b'GET' request for ['127.0.0.1', 59606]
+HTTP 200 response started for ['127.0.0.1', 59606]
+HTTP close for ['127.0.0.1', 59606]
+HTTP response complete for ['127.0.0.1', 59606]
+[mHTTP GET /your_listings/ 200 [0.01, 127.0.0.1:59606][0m
+WebSocket HANDSHAKING /ws/auction/ [127.0.0.1:60427]
+Upgraded connection ['127.0.0.1', 60427] to WebSocket
+WebSocket closed for ['127.0.0.1', 60393]
+WebSocket DISCONNECT /ws/auction/ [127.0.0.1:60393]
+WebSocket ['127.0.0.1', 60427] open and established
+WebSocket CONNECT /ws/auction/ [127.0.0.1:60427]
+WebSocket ['127.0.0.1', 60427] accepted by application
+E:\Auction-Haven-master\AuctionHaven\commerce\settings.py changed, reloading.
+Using selector: SelectSelector
+Watching for file changes with StatReloader
+E:\Auction-Haven-master\AuctionHaven\commerce\settings.py changed, reloading.
+Watching for file changes with StatReloader
+E:\Auction-Haven-master\AuctionHaven\commerce\settings.py changed, reloading.
+Watching for file changes with StatReloader
+E:\Auction-Haven-master\AuctionHaven\commerce\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/
+Not Found: /ws/auction/

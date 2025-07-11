@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Sidebar adjustments */
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+
+        /* Main content area */
+        .main-content {
+            margin-left: 300px; /* Ensure content doesn't overlap with the sidebar */
+            padding: 20px;
+            width: calc(100% - 300px); /* Take the full width minus sidebar */
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex">
+
+        <!-- Sidebar -->
+        <div class="sidebar bg-dark text-white p-4">
+            <a href="{% url 'admin_view' %}" class="text-white h4 font-weight-bold mb-4">Admin Dashboard</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="{% url "manage_users" %}" class="nav-link text-white btn btn-outline-light btn-block  hover:bg-gray-700">Manage Users</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url "manage_listings" %}" class="nav-link text-white btn btn-outline-light btn-block  hover:bg-gray-700">Manage Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url "reports" %}" class="nav-link text-white btn btn-outline-light btn-block  hover:bg-gray-700">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link text-danger btn btn-outline-light btn-block  hover:bg-gray-200">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            {% block body %}
+            {% endblock %}
+        </div>
+
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

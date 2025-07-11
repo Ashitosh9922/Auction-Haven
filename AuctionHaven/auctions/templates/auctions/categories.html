@@ -1,0 +1,45 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+<section class="bg-dark py-5 px-4 px-md-5 min-vh-100">
+    <div class="container">
+        <h1 class="text-center text-white mb-5 mt-5">Categories</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for category in categories %}
+            <div class="col">
+                <div class="card h-100 border-0 rounded-lg shadow-sm">
+                    <a href="{% url 'category' category %}" class="stretched-link">
+                        <div class="position-relative overflow-hidden">
+                            {% if category == 'Trading Cards' %}
+                                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/trading-cards-4202156-3479115.png?f=webp&w=256"
+                                    class="img-fluid mx-auto mt-3 card-img" alt="Trading Cards" loading="lazy">
+                            {% elif category == 'Currency & Coins' %}
+                                <img src="{% static 'auctions/coins.svg' %}" class="img-fluid mx-auto mt-3 card-img" alt="Currency & Coins" loading="lazy">
+                            {% elif category == 'Comic Books' %}
+                                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/comic-book-4595476-3806068.png?f=webp&w=256"
+                                    class="img-fluid mx-auto mt-3 card-img" alt="Comic Books" loading="lazy">
+                            {% elif category == 'Figurines' %}
+                                <img src="{% static 'auctions/figurine.svg' %}" class="img-fluid mx-auto mt-3 card-img" alt="Figurines" loading="lazy">
+                            {% elif category == 'Other' %}
+                                <img src="{% static 'auctions/other_icon.svg' %}" class="img-fluid mx-auto mt-3 card-img" alt="Other" loading="lazy">
+                            {% elif category == 'Collectibles' %}
+                                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/gallery-artwork-11129775-9011199.png?f=webp&w=256"
+                                    class="img-fluid mx-auto mt-3 card-img" alt="Collectibles" loading="lazy">
+                            {% else %}
+                                <img src="https://epicpadprinting.com/public/img/indus/Automotive.png" class="img-fluid mx-auto mt-3 card-img" alt="Automotive" loading="lazy">
+                            {% endif %}
+                        </div>
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">
+                            <a href="{% url 'category' category %}" class="text-decoration-none text-dark">{{ category }}</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

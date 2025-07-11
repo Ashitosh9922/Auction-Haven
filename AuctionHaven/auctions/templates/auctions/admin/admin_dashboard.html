@@ -1,0 +1,62 @@
+{% extends "auctions/admin/admin_layout.html" %}
+{% load static %}
+{% block body %}
+
+<!-- Main Content Area -->
+<div class="container-fluid">
+    <header class="bg-white border-bottom py-4">
+        <h1 class="text-center h4 font-weight-semibold">Auction Haven</h1>
+    </header>
+    <main class="bg-light py-4">
+        <div class="container">
+
+            <!-- Grid Layout for Admin Functionality -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-4">
+
+                <!-- Total Users -->
+                <div class="col">
+                    <div class="card text-dark bg-info h-100 shadow-lg">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <h2 class="card-title h5 font-weight-semibold mb-2">Total Users</h2>
+                            <p class="card-text display-4">{{ total_users }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Listings -->
+                <div class="col">
+                    <div class="card text-dark bg-success h-100 shadow-lg">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <h2 class="card-title h5 font-weight-semibold mb-2">Total Listings</h2>
+                            <p class="card-text display-4">{{ total_listings }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Listings -->
+                <div class="col">
+                    <div class="card text-dark bg-danger h-100 shadow-lg">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <h2 class="card-title h5 font-weight-semibold mb-2">Active Listings</h2>
+                            <p class="card-text display-4">{{ active_listings }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inactive Listings -->
+                <div class="col">
+                    <div class="card text-dark bg-secondary h-100 shadow-lg">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                            <h2 class="card-title h5 font-weight-semibold mb-2">Inactive Listings</h2>
+                            <p class="card-text display-4">{{ inactive_listings }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}
