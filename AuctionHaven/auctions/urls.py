@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -30,22 +30,13 @@ urlpatterns = [
     path('delete_listing/<int:listing_id>/', views.delete_listing, name='delete_listing'),
     path("admin-dashboard/reports", views.reports, name="reports"),
     path('forbidden/', views.forbidden_view, name='forbidden'),
+    # Include API URLs
+    path('api/', include('auctions.api_urls')),
+    
+
 ]
 
 
 
-from rest_framework.routers import DefaultRouter
-from .views import ListingViewSet, BidViewSet, CommentViewSet, UserViewSet
-from django.urls import path, include  # Make sure this is imported
 
-# ✅ DRF API routes
-router = DefaultRouter()
-router.register(r'listings', ListingViewSet)
-router.register(r'bids', BidViewSet)
-router.register(r'comments', CommentViewSet)
-router.register(r'users', UserViewSet)
 
-# 👇 Add this line to include API URLs under /api/
-urlpatterns += [
-    path('api/', include(router.urls)),
-]
