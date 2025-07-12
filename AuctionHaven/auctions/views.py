@@ -16,6 +16,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.hashers import make_password
 import time, datetime, calendar
 from django.template.loader import render_to_string
+from rest_framework.exceptions import PermissionDenied
 
 
 def index(request):
@@ -484,6 +485,17 @@ from .serializers import ListingSerializer, BidSerializer, CommentSerializer, Us
 class ListingViewSet(viewsets.ModelViewSet):
   queryset = Listing.objects.all()
   serializer_class = ListingSerializer
+  def get_queryset(self):
+    return Listing.objects.filter(user=self.request.user)
+  def perform_update(self, serializer):
+        if serializer.instance.user != self.request.user:
+            raise PermissionDenied("You cannot update another user's listing.")
+        serializer.save()
+  def perform_destroy(self, instance):
+        if instance.user != self.request.user:
+            raise PermissionDenied("You cannot delete another user's listing.")
+        instance.delete()
+
 
 class BidViewSet(viewsets.ModelViewSet):
   queryset = Bid.objects.all()
