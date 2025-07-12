@@ -42,13 +42,4 @@ env/
 ENV/
 .venv/
 
-# Compiled JS or frontend tools
-*.bundle.js
-*.min.js
-*.map
-node_modules/
 
-# Channels/WebSockets (if removed from your project)
-**/routing.py
-**/consumers.py
-**/asgi.py
