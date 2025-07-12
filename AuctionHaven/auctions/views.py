@@ -477,7 +477,6 @@ def forbidden_view(request):
     return render(request,"auctions/admin/forbidden.html")
 
 
-<<<<<<< HEAD
 from rest_framework import viewsets
 from .models import Listing, Bid, Comment, User
 from .serializers import ListingSerializer, BidSerializer, CommentSerializer, UserSerializer
@@ -497,5 +496,3 @@ class CommentViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
   queryset = User.objects.all()
   serializer_class = UserSerializer
-=======
->>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5

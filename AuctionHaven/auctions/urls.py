@@ -31,7 +31,6 @@ urlpatterns = [
     path("admin-dashboard/reports", views.reports, name="reports"),
     path('forbidden/', views.forbidden_view, name='forbidden'),
 ]
-<<<<<<< HEAD
 
 
 
@@ -50,5 +49,3 @@ router.register(r'users', UserViewSet)
 urlpatterns += [
     path('api/', include(router.urls)),
 ]
-=======
->>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5

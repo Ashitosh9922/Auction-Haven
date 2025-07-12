@@ -10,24 +10,15 @@ DEBUG = True
 ALLOWED_HOSTS = ['192.168.0.103', 'localhost', '127.0.0.1', '192.168.143.221']
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
 
     'auctions',  # Your custom app
-=======
-    'daphne',
-    'auctions',  # Your custom app
-    'channels',  # Django Channels for WebSockets
->>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'rest_framework',
-=======
->>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5
 ]
 
 # Remove 'django_otp' and related external apps if not used
@@ -67,21 +58,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'commerce.wsgi.application'
 
-<<<<<<< HEAD
-=======
-# ASGI configuration for Channels
-ASGI_APPLICATION = "commerce.asgi.application"
-
-# WebSocket Channels configuration (Redis as the channel layer)
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],  # Redis default host and port
-        },
-    },
-}
->>>>>>> dcfb3990f96f8ce74d706109dd8a5680d1e773b5
 
 # Database
 DATABASES = {
