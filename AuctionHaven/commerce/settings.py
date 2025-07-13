@@ -110,7 +110,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
-    "D:\internship project\AuctionHaven\\auctions\static",  # Adjust the path as necessary
+    "D:\\internship project\\AuctionHaven\\auctions\\static",  # Adjust the path as necessary
 ]
 
 # Email settings
