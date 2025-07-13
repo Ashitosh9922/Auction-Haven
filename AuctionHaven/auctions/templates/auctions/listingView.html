@@ -33,13 +33,13 @@
         <div class="row">
             <!-- Image Section -->
             {% if listing.image %}
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-12 mb-3">
                 <img class="img-fluid rounded shadow-sm" alt="image" src="/media/{{ listing.image }}" />
             </div>
             {% endif %}
 
             <!-- Content Section -->
-            <div class="col-lg-8 col-md-6 ">
+            <div class="col-lg-8 col-md-6 col-12">
                 <div class="card w-100 mb-4">
                     <div class="card-body">
                         <!-- Product Titles -->
@@ -54,20 +54,21 @@
                         </div>
 
                         <!-- Pricing Section -->
-                        <div class="d-flex justify-content-between py-3">
-                            <div class="text-center w-40 p-3">
-                                <p class="fs-4 mb-0">Initial Price</p>
-                                <button class="btn btn-success text-white fs-3">
-                                    <strong>₹{{ listing.starting_value }}</strong>
+                                <div class="row text-center py-3">
+                            <div class="col-sm-6 col-12 mb-3 p-3">
+                                <p class="fs-5 mb-1">Initial Price</p>
+                                <button class="btn btn-success text-white fs-4 w-100 text-nowrap">
+                                <strong>₹{{ listing.starting_value }}</strong>
                                 </button>
                             </div>
-                            <div class="text-center w-40 p-3">
-                                <p class="fs-4 mb-0">Current Price</p>
-                                <button class="btn btn-danger text-white fs-3">
-                                    <strong>₹{{ current_bid }}</strong>
+                            <div class="col-sm-6 col-12 mb-3 p-3">
+                                <p class="fs-5 mb-1">Current Price</p>
+                                <button class="btn btn-danger text-white fs-4 w-100 text-nowrap">
+                                <strong>₹{{ current_bid }}</strong>
                                 </button>
                             </div>
-                        </div>
+                            </div>
+
 
                         <!-- Current Highest Bidder -->
                         <div class="my-4 text-center">
