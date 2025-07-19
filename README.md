@@ -4,6 +4,10 @@
 AuctionHaven is an online auction platform that connects collectors, buyers, and sellers of unique items, collectibles, and antiques. With a user-friendly interface, intuitive category browsing, and seamless bidding features, AuctionHaven provides an engaging experience for all.
 
 ---
+🔗 Live Demo
+
+Check out the deployed version of AuctionHeaven:
+👉 https://ashitosh77.pythonanywhere.com/
 
 ## 🌟 Features
 
